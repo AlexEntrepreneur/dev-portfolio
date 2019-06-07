@@ -37,6 +37,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
+    historyApiFallback: true,
     publicPath: '/bundle/',
     compress: true,
     port: 3300
