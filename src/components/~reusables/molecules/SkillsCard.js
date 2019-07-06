@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Card } from '../atoms/atoms';
 import { small_space, normal_space, medium_space } from '../variables/spacing';
 
-export const SkillCard = styled(Card)`
+export const SkillsCard = styled(Card)`
   position: relative;
   margin-bottom: ${normal_space};
   overflow: visible;

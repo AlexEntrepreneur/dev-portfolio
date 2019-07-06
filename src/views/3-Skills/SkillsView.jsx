@@ -1,52 +1,52 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { View, Container } from '../../components/~reusables/atoms/atoms';
-import { SkillCard } from '../../components/~reusables/molecules/SkillCard';
+import { View, Container, HeadingText, Text, Button } from '../../components/~reusables/atoms/atoms';
+import { SkillsCard } from '../../components/~reusables/molecules/SkillsCard';
 import { small_space } from '../../components/~reusables/variables/spacing';
 
 function SkillsView() {
   return (
-    <View hCenter>
-      <h2>Skills Stack</h2>
-      <Container fullWidth column padding={small_space}>
-        <SkillCard hCenter>
-          UX
-        </SkillCard>
-        <SkillCard hCenter>
-          <div className="title">UI Design</div>
+    <View hCenter padding={small_space}>
+      <HeadingText>Skills Stack</HeadingText>
+      <Container fullWidth column>
+        <SkillsCard hCenter>
+          <Text noMargin>UX</Text>
+        </SkillsCard>
+        <SkillsCard hCenter>
+          <Text noMargin className="title">UI Design</Text>
           ...
-        </SkillCard>
+        </SkillsCard>
         <Container>
-          <SkillCard fullWidth hCenter>
-            <div className="title">Frontend Web</div>
+          <SkillsCard fullWidth hCenter>
+            <Text noMargin className="title">Frontend Web</Text>
             ...
-          </SkillCard>
-          <SkillCard hCenter width="30%">
-            <div className="title">Tooling</div>
+          </SkillsCard>
+          <SkillsCard hCenter width="50%">
+            <Text noMargin className="title">Tooling</Text>
             ...
-          </SkillCard>
+          </SkillsCard>
         </Container>
         <Container>
-          <SkillCard fullWidth hCenter>
-            <div className="title">Backend</div>
+          <SkillsCard fullWidth hCenter>
+            <Text noMargin className="title">Backend</Text>
             ...
-          </SkillCard>
-          <SkillCard hCenter width="30%">
-            <div className="title">Tooling</div>
+          </SkillsCard>
+          <SkillsCard hCenter width="50%">
+            <Text noMargin className="title">Tooling</Text>
             ...
-          </SkillCard>
+          </SkillsCard>
         </Container>
-        <SkillCard hCenter>
-          <div className="title">Data Storage</div>
+        <SkillsCard hCenter>
+          <Text noMargin className="title">Data Storage</Text>
           ...
-        </SkillCard>
-        <SkillCard hCenter>
-          <div className="title">Computer Science</div>
+        </SkillsCard>
+        <SkillsCard hCenter>
+          <Text noMargin className="title">Computer Science</Text>
           ...
-        </SkillCard>
+        </SkillsCard>
       </Container>
       <Link to='/projects'>
-        <button>↓</button>
+        <Button>↓</Button>
       </Link>
     </View>
   )
