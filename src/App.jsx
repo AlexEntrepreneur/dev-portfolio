@@ -8,20 +8,24 @@ import ProjectInfoView from './views/4-Projects/ProjectInfoView';
 import ProjectSandboxView from './views/4-Projects/ProjectSandboxView';
 import ResumeView from './views/5-Resume/ResumeView';
 import ContactView from './views/6-Contact/ContactView';
+import { GlobalStyles } from './components/~reusables/global';
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={IntroView} />
-      <Route exact path="/about" component={AboutView} />
-      <Route exact path="/skills" component={SkillsView} />
-      <Route exact path="/projects" component={ProjectsView} />
-      <Route exact path="/project" component={() => <Redirect to="/projects"/>} />
-      <Route exact path="/project/:id(\d+)" component={ProjectInfoView} />
-      <Route exact path="/project/:id(\d+)/sandbox" component={ProjectSandboxView} />
-      <Route exact path="/resume" component={ResumeView} />
-      <Route exact path="/contact" component={ContactView} />
-    </Switch>
+    <>
+      <GlobalStyles boxSizing='border-box' />
+      <Switch>
+        <Route exact path="/" component={IntroView} />
+        <Route exact path="/about" component={AboutView} />
+        <Route exact path="/skills" component={SkillsView} />
+        <Route exact path="/projects" component={ProjectsView} />
+        <Route exact path="/project" component={() => <Redirect to="/projects"/>} />
+        <Route exact path="/project/:id(\d+)" component={ProjectInfoView} />
+        <Route exact path="/project/:id(\d+)/sandbox" component={ProjectSandboxView} />
+        <Route exact path="/resume" component={ResumeView} />
+        <Route exact path="/contact" component={ContactView} />
+      </Switch>
+    </>
   );
 }
 
