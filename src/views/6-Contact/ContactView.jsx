@@ -13,7 +13,7 @@ function ContactView() {
       </Section>
       
       <A href="mailto:hi@email.com" noUnderline>
-        <Container column>
+        <Container column hCenter>
           <Button marginBottom={small_space}>Icon</Button>
           <Text color={theme_primary} underline>hi@email.com</Text>
         </Container>
@@ -21,19 +21,19 @@ function ContactView() {
 
       <Container>
         <A href="https://github.com/AlexEntrepreneur" target="_blank" noUnderline>
-          <Container column>
+          <Container column hCenter>
             <Button marginBottom={small_space}>Icon</Button>
             <Text underline>GitHub</Text>
           </Container>
         </A>
         <A href="https://twitter.com/AlexEntrprnr" target="_blank" noUnderline>
-          <Container column>
+          <Container column hCenter>
             <Button marginBottom={small_space}>Icon</Button>
             <Text underline>Twitter</Text>
           </Container>
         </A>
         <A href="https://linkedin.com/" target="_blank" noUnderline>
-          <Container column>
+          <Container column hCenter>
             <Button marginBottom={small_space}>Icon</Button>
             <Text underline>LinkedIn</Text>
           </Container>
