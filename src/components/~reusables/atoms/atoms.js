@@ -8,10 +8,14 @@ import {
 import { 
   base_font_size, 
   small_font_size, 
-  h3_font_size 
+  h1_font_size,
+  h2_font_size,
+  h3_font_size,
+  h4_font_size 
 } from '../variables/font-sizes';
 import { 
-  white, 
+  white,
+  theme_dark,
   theme_primary,
   theme_secondary
 } from '../variables/colors';
@@ -19,28 +23,27 @@ import {
 
 //====== Buttons ======//
 export const Button = styled.button`
-  min-height: 5rem;
-  padding: ${normal_space} ${large_space};
-  font-size: inherit;
-  font-weight: 600;
-  background-color: ${white};
+  padding: ${small_space};
+  font-size: ${base_font_size};
+  text-transform: uppercase;
   border: none;
   outline: none;
   margin-bottom: ${normal_space};
-  border-radius: ${small_space};
-  box-shadow: 0 .8rem 2.5rem 0 rgba(40, 51, 63, .11);
+  border: 1px solid ${theme_secondary};
+  color: ${theme_secondary};
+  border-radius: 2px;
   transition: all 100ms ease-in-out;
   cursor: pointer;
   
   &:active {
     opacity: .8;
-    box-shadow: 0 6px 10px 0 rgba(40, 51, 63, .11);
   }
 `;
 
 export const ButtonPrimary = styled(Button)`
   background-color: ${theme_primary};
-  color: ${white};
+  color: ${theme_dark};
+  border: unset;
 `;
 
 export const TextButton = styled(Button)`
@@ -136,16 +139,43 @@ export const Input = styled.input`
 export const Text = styled.p`
   font-size: ${base_font_size};
   line-height: 2.8rem;
-  margin-bottom: ${medium_space};
+  margin-bottom: ${small_space};
 
   ${props => (props.light ? `color: ${white};` : null)}
+  ${props => (props.noMargin ? `margin: 0;` : null)}
 `;
 
 export const SmallText = styled(Text)`
   font-size: ${small_font_size};
   margin-bottom: ${normal_space};
-
+  
   ${props => (props.light ? `color: ${white};` : null)}
+  ${props => (props.noMargin ? `margin: 0;` : null)}
+`;
+
+export const HeroText = styled.h1`
+  font-size: ${h1_font_size};
+  margin-bottom: ${small_space};
+  color: ${theme_primary};
+
+  ${props => (props.noMargin ? `margin: 0;` : null)}
+`;
+
+export const HeadingText = styled.h3`
+  font-size: ${h3_font_size};
+  margin-bottom: ${normal_space};
+  color: ${theme_primary};
+
+  ${props => (props.noMargin ? `margin: 0;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+`;
+
+export const SubheadingText = styled.h4`
+  font-size: ${h4_font_size};
+  margin-bottom: ${normal_space};
+  color: ${theme_secondary};
+
+  ${props => (props.noMargin ? `margin: 0;` : null)}
 `;
 
 export const H3 = styled.h3`
@@ -169,4 +199,5 @@ export const View = styled.div`
   ${props => (props.vCenter ? `justify-content: center;` : null)}
   ${props => (props.hCenter ? `align-items: center;` : null)}
   ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
+  ${props => (props.padding ? `padding: ${props.padding};` : null)}
 `;
