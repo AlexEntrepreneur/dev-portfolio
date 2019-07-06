@@ -112,6 +112,21 @@ export const Container = styled.div`
   ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
 `;
 
+//====== Section ======//
+export const Section = styled.section`
+  display: flex;
+  margin-bottom: ${medium_space};
+
+  ${props => (props.vCenter ? `justify-content: center;` : null)}
+  ${props => (props.column ? `flex-direction: column;` : null)}
+  ${props => (props.hCenter ? `align-items: center;` : null)}
+  ${props => (props.padding && Array.isArray(props.padding) ? `padding: ${props.padding.join(' ')};` : null)}
+  ${props => (props.padding && Array.isArray(props.padding) === false ? `padding: ${props.padding};` : null)}
+  ${props => (props.fullWidth ? `width: 100%;` : null)}
+  ${props => (props.width ? `width: ${props.width};` : null)}
+  ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
+`;
+
 //====== Inputs ======//
 export const Input = styled.input`
   appearance: none;
@@ -138,7 +153,7 @@ export const Input = styled.input`
 //====== Text ======//
 export const Text = styled.p`
   font-size: ${base_font_size};
-  line-height: 2.8rem;
+  line-height: 2.5rem;
   margin-bottom: ${small_space};
 
   ${props => (props.light ? `color: ${white};` : null)}
@@ -188,7 +203,7 @@ export const H3 = styled.h3`
   ${props => (props.color ? `color: ${props.color};` : null)}
 `;
 
-//====== View  ======//
+//====== View ======//
 export const View = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -200,4 +215,48 @@ export const View = styled.div`
   ${props => (props.hCenter ? `align-items: center;` : null)}
   ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
   ${props => (props.padding ? `padding: ${props.padding};` : null)}
+`;
+
+//====== Img ======//
+export const Img = styled.img`
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+`;
+
+//====== Figure + Figcaption ======//
+export const Figure = styled.figure`
+  padding: 3px;
+  margin: 0;
+  border: 1px solid ${theme_secondary};
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: ${small_space};
+
+  ${props => (props.width ? `width: ${props.width};` : null)}
+  ${props => (props.height ? `height: ${props.height};` : null)}
+  ${props => (props.fullWidth ? `width: 100%;` : null)}
+`;
+
+export const Figcaption = styled.figcaption`
+  font-size: ${base_font_size};
+  display: flex;
+
+  
+  ${props => (
+    props.vCenter && props.column
+      ? `justify-content: center;`
+      : props.vCenter
+        ? `align-items: center;`
+        : null
+  )}
+  ${props => (
+    props.hCenter && props.column
+      ? `align-items: center;`
+      : props.hCenter
+        ? `justify-content: center;`
+        : null
+  )}
 `;
