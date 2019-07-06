@@ -62,11 +62,35 @@ export const TextButtonPrimary = styled(TextButton)`
 export const Card = styled.div`
   display: flex;
   padding: ${medium_space} ${normal_space};
+  border: 1px solid ${theme_secondary};
+  border-radius: 2px;
   overflow: hidden;
 
   ${props => (props.row ? `flex-direction: row;` : null)}
+  ${props => (props.column ? `flex-direction: column;` : null)}
+  ${
+    props => (
+      props.vCenter && props.column 
+      ? `justify-content: center;`
+      : props.vCenter
+        ? `align-items: center;`
+      : null
+    )
+  }
+  ${
+    props => (
+      props.hCenter && props.column
+      ? `align-items: center;`
+      : props.hCenter
+        ? `justify-content: center;`
+      : null
+    )
+  }
   ${props => (props.noPadding ? `padding: 0;` : null)}
+  ${props => (props.padding && Array.isArray(props.padding) ? `padding: ${props.padding.join(' ')};` : null)}
+  ${props => (props.padding && Array.isArray(props.padding) === false ? `padding: ${props.padding};` : null)}
   ${props => (props.fullWidth ? `width: 100%;` : null)}
+  ${props => (props.width ? `width: ${props.width};` : null)}
   ${props => (props.maxWidth ? `max-width: ${props.maxWidth};` : null)}
   ${props => (props.margin ? `margin: ${props.margin};` : null)}
 `;
@@ -78,8 +102,9 @@ export const Container = styled.div`
   ${props => (props.vCenter ? `justify-content: center;` : null)}
   ${props => (props.column ? `flex-direction: column;` : null)}
   ${props => (props.hCenter ? `align-items: center;` : null)}
-  ${props => (Array.isArray(props.padding) ? `padding: ${props.padding[0]} ${props.padding[1]};` : null)}
-  ${props => (Array.isArray(props.padding) === false ? `padding: ${props.padding};` : null)}
+  ${props => (props.padding && Array.isArray(props.padding) ? `padding: ${props.padding.join(' ')};` : null)}
+  ${props => (props.padding && Array.isArray(props.padding) === false ? `padding: ${props.padding};` : null)}
+  ${props => (props.fullWidth ? `width: 100%;` : null)}
   ${props => (props.width ? `width: ${props.width};` : null)}
   ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
 `;
