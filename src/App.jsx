@@ -13,14 +13,14 @@ function App() {
   return (
     <Switch>
       <Route exact path="/" component={IntroView} />
-      <Route path="/about" component={AboutView} />
-      <Route path="/skills" component={SkillsView} />
-      <Route path="/projects" component={ProjectsView} />
+      <Route exact path="/about" component={AboutView} />
+      <Route exact path="/skills" component={SkillsView} />
+      <Route exact path="/projects" component={ProjectsView} />
       <Route exact path="/project" component={() => <Redirect to="/projects"/>} />
-      <Route path="/project/:id(\d+)" component={ProjectInfoView} />
-      <Route path="/project/3/sandbox" component={ProjectSandboxView} />
-      <Route path="/resume" component={ResumeView} />
-      <Route path="/contact" component={ContactView} />
+      <Route exact path="/project/:id(\d+)" component={ProjectInfoView} />
+      <Route exact path="/project/:id(\d+)/sandbox" component={ProjectSandboxView} />
+      <Route exact path="/resume" component={ResumeView} />
+      <Route exact path="/contact" component={ContactView} />
     </Switch>
   );
 }
