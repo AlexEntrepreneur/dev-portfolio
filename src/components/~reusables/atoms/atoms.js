@@ -32,7 +32,7 @@ export const Button = styled.button`
   border: 1px solid ${theme_secondary};
   color: ${theme_secondary};
   border-radius: 2px;
-  transition: all 100ms ease-in-out;
+  text-decoration: none;
   cursor: pointer;
   
   &:active {
@@ -40,20 +40,8 @@ export const Button = styled.button`
   }
 
   ${props => (props.fullWidth ? `width: 100%;` : null)}
-    ${props => (
-    props.vCenter && props.column
-      ? `justify-content: center;`
-      : props.vCenter
-        ? `align-items: center;`
-        : null
-  )}
-  ${props => (
-    props.hCenter && props.column
-      ? `align-items: center;`
-      : props.hCenter
-        ? `justify-content: center;`
-        : null
-  )}
+  ${props => (props.noMargin ? `margin: 0;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 export const ButtonPrimary = styled(Button)`
@@ -62,6 +50,8 @@ export const ButtonPrimary = styled(Button)`
   border: unset;
 
   ${props => (props.fullWidth ? `width: 100%;` : null)}
+  ${props => (props.noMargin ? `margin: 0;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 export const TextButton = styled(Button)`
@@ -176,6 +166,8 @@ export const Text = styled.p`
 
   ${props => (props.light ? `color: ${white};` : null)}
   ${props => (props.noMargin ? `margin: 0;` : null)}
+  ${props => (props.underline ? `text-decoration: underline;` : null)}
+  ${props => (props.color ? `color: ${props.color};` : null)}
 `;
 
 export const SmallText = styled(Text)`
@@ -184,6 +176,7 @@ export const SmallText = styled(Text)`
   
   ${props => (props.light ? `color: ${white};` : null)}
   ${props => (props.noMargin ? `margin: 0;` : null)}
+  ${props => (props.color ? `color: ${props.color};` : null)}
 `;
 
 export const HeroText = styled.h1`
@@ -219,6 +212,19 @@ export const H3 = styled.h3`
   ${props => (props.bold ? `font-weight: bold;` : null)}
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.color ? `color: ${props.color};` : null)}
+`;
+
+export const A = styled.a`
+  color: ${theme_secondary};
+
+  ${props => (props.noUnderline ? `text-decoration: none;` : null)}
+`;
+
+export const APrimary = styled.a`
+  color: ${theme_primary};
+  font-size: ${base_font_size}
+
+  ${props => (props.noUnderline ? `text-decoration: none;` : null)}
 `;
 
 //====== View ======//
