@@ -1,10 +1,10 @@
 import React from 'react';
-import { View } from '../../components/~reusables/atoms/atoms';
+import { View, HeadingText } from '../../components/~reusables/atoms/atoms';
 
 function AboutView() {
   return (
     <View hCenter>
-      <h2>About</h2>
+      <HeadingText>About</HeadingText>
     </View>
   );
 }
