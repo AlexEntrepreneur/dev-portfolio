@@ -38,12 +38,30 @@ export const Button = styled.button`
   &:active {
     opacity: .8;
   }
+
+  ${props => (props.fullWidth ? `width: 100%;` : null)}
+    ${props => (
+    props.vCenter && props.column
+      ? `justify-content: center;`
+      : props.vCenter
+        ? `align-items: center;`
+        : null
+  )}
+  ${props => (
+    props.hCenter && props.column
+      ? `align-items: center;`
+      : props.hCenter
+        ? `justify-content: center;`
+        : null
+  )}
 `;
 
 export const ButtonPrimary = styled(Button)`
   background-color: ${theme_primary};
   color: ${theme_dark};
   border: unset;
+
+  ${props => (props.fullWidth ? `width: 100%;` : null)}
 `;
 
 export const TextButton = styled(Button)`

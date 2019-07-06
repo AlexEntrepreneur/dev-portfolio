@@ -1,13 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { View } from '../../components/~reusables/atoms/atoms';
+import { View, ButtonPrimary, Button, HeadingText, Figure, Img, Figcaption, Container } from '../../components/~reusables/atoms/atoms';
 
 function ResumeView() {
   return (
     <View hCenter>
-      <h2>Resumé</h2>
+      <HeadingText>Resumé</HeadingText>
+      <Container column>
+        <Figure>
+          <Img src="https://picsum.photos/320/430?blur=10" />
+        </Figure>
+        <Figcaption>
+          <ButtonPrimary fullWidth>Download</ButtonPrimary>
+        </Figcaption>
+      </Container>
       <Link to='/contact'>
-        <button>↓</button>
+        <Button>↓</Button>
       </Link>
     </View>
   )
