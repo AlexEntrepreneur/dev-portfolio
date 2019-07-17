@@ -183,6 +183,7 @@ export const HeroText = styled.h1`
   font-size: ${h1_font_size};
   margin-bottom: ${small_space};
   color: ${theme_primary};
+  text-transform: uppercase;
 
   ${props => (props.noMargin ? `margin: 0;` : null)}
 `;
@@ -190,41 +191,48 @@ export const HeroText = styled.h1`
 export const HeadingText = styled.h3`
   font-size: ${h3_font_size};
   margin-bottom: ${normal_space};
+  margin-top: ${large_space};
   color: ${theme_primary};
+  text-transform: uppercase;
 
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
+  ${props => (props.marginTop ? `margin-top: ${props.marginTop};` : null)}
+  ${props => (props.hCenter ? `text-align: center;` : null)}
 `;
 
 export const SubheadingText = styled.h4`
   font-size: ${h4_font_size};
   margin-bottom: ${normal_space};
   color: ${theme_secondary};
+  text-transform: uppercase;
 
   ${props => (props.noMargin ? `margin: 0;` : null)}
+  ${props => (props.hCenter ? `text-align: center;` : null)}
 `;
 
 export const H3 = styled.h3`
   font-size: ${h3_font_size};
   margin-bottom: ${normal_space};
+  text-transform: uppercase;
 
   ${props => (props.light ? `color: ${white};` : null)}
   ${props => (props.bold ? `font-weight: bold;` : null)}
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.color ? `color: ${props.color};` : null)}
+  ${props => (props.hCenter ? `text-align: center;` : null)}
 `;
 
 export const A = styled.a`
   color: ${theme_secondary};
-
-  ${props => (props.noUnderline ? `text-decoration: none;` : null)}
-`;
-
-export const APrimary = styled.a`
-  color: ${theme_primary};
   font-size: ${base_font_size}
 
   ${props => (props.noUnderline ? `text-decoration: none;` : null)}
+  ${props => (props.hCenter ? `text-align: center;` : null)}
+`;
+
+export const APrimary = styled(A)`
+  color: ${theme_primary};
 `;
 
 //====== View ======//
