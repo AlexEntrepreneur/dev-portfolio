@@ -169,6 +169,7 @@ export const Text = styled.p`
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.underline ? `text-decoration: underline;` : null)}
   ${props => (props.color ? `color: ${props.color};` : null)}
+  ${props => (props.hCenter ? `text-align: center;` : null)}
 `;
 
 export const SmallText = styled(Text)`
@@ -178,6 +179,7 @@ export const SmallText = styled(Text)`
   ${props => (props.light ? `color: ${white};` : null)}
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.color ? `color: ${props.color};` : null)}
+  ${props => (props.hCenter ? `text-align: center;` : null)}
 `;
 
 export const HeroText = styled.h1`
@@ -187,6 +189,7 @@ export const HeroText = styled.h1`
   text-transform: uppercase;
 
   ${props => (props.noMargin ? `margin: 0;` : null)}
+  ${props => (props.hCenter ? `text-align: center;` : null)}
 `;
 
 export const HeadingText = styled.h3`
