@@ -279,6 +279,7 @@ export const Figure = styled.figure`
   ${props => (props.width ? `width: ${props.width};` : null)}
   ${props => (props.height ? `height: ${props.height};` : null)}
   ${props => (props.fullWidth ? `width: 100%;` : null)}
+  ${props => (props.noBorder ? `border: unset;` : null)}
 `;
 
 export const Figcaption = styled.figcaption`
