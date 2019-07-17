@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Link as L } from 'react-router-dom';
 import { 
@@ -227,9 +228,12 @@ export const H3 = styled.h3`
   ${props => (props.hCenter ? `text-align: center;` : null)}
 `;
 
-export const Link = styled(L)`
+export const Link = styled(({ fullWidth, ...rest}) => <L {...rest}/>)`
   text-decoration: none;
   color: unset;
+  display: inline-block;
+
+  ${props => (props.fullWidth ? `width: 100%;` : null)}
 `;
 
 export const A = styled.a`
