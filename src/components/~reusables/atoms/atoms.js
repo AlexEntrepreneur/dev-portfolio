@@ -135,6 +135,7 @@ export const Section = styled.section`
   ${props => (props.fullWidth ? `width: 100%;` : null)}
   ${props => (props.width ? `width: ${props.width};` : null)}
   ${props => (props.bgColor ? `background-color: ${props.bgColor};` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 //====== Inputs ======//
@@ -171,6 +172,7 @@ export const Text = styled.p`
   ${props => (props.underline ? `text-decoration: underline;` : null)}
   ${props => (props.color ? `color: ${props.color};` : null)}
   ${props => (props.hCenter ? `text-align: center;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 export const SmallText = styled(Text)`
@@ -181,6 +183,7 @@ export const SmallText = styled(Text)`
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.color ? `color: ${props.color};` : null)}
   ${props => (props.hCenter ? `text-align: center;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 export const HeroText = styled.h1`
@@ -191,6 +194,7 @@ export const HeroText = styled.h1`
 
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.hCenter ? `text-align: center;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 export const HeadingText = styled.h3`
@@ -204,6 +208,7 @@ export const HeadingText = styled.h3`
   ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
   ${props => (props.marginTop ? `margin-top: ${props.marginTop};` : null)}
   ${props => (props.hCenter ? `text-align: center;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 export const SubheadingText = styled.h4`
@@ -214,6 +219,7 @@ export const SubheadingText = styled.h4`
 
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.hCenter ? `text-align: center;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 export const H3 = styled.h3`
@@ -226,6 +232,7 @@ export const H3 = styled.h3`
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.color ? `color: ${props.color};` : null)}
   ${props => (props.hCenter ? `text-align: center;` : null)}
+  ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : null)}
 `;
 
 export const Link = styled(({ fullWidth, ...rest}) => <L {...rest}/>)`
