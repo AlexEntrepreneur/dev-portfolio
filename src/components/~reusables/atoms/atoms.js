@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as L } from 'react-router-dom';
 import { 
   small_space, 
   normal_space,
@@ -221,6 +222,11 @@ export const H3 = styled.h3`
   ${props => (props.noMargin ? `margin: 0;` : null)}
   ${props => (props.color ? `color: ${props.color};` : null)}
   ${props => (props.hCenter ? `text-align: center;` : null)}
+`;
+
+export const Link = styled(L)`
+  text-decoration: none;
+  color: unset;
 `;
 
 export const A = styled.a`
