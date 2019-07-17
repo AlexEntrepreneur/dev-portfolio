@@ -238,10 +238,11 @@ export const Link = styled(({ fullWidth, ...rest}) => <L {...rest}/>)`
 
 export const A = styled.a`
   color: ${theme_secondary};
-  font-size: ${base_font_size}
+  font-size: ${base_font_size};
 
   ${props => (props.noUnderline ? `text-decoration: none;` : null)}
   ${props => (props.hCenter ? `text-align: center;` : null)}
+  ${props => (props.fullWidth ? `width: 100%;` : null)}
 `;
 
 export const APrimary = styled(A)`
