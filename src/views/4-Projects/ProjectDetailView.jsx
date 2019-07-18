@@ -29,7 +29,7 @@ function ProjectInfoView(props) {
           <Text><strong>Task:</strong> dkjhwoeowu</Text>
           <Text><strong>Technologies:</strong> dkjhwoeowu</Text>
         </Card>
-        <Link to={`${id}/sandbox`} fullWidth>
+        <Link to={`${props.match.url}/sandbox`} fullWidth>
           <ButtonPrimary fullWidth>View Project</ButtonPrimary>
         </Link>
       </Section>

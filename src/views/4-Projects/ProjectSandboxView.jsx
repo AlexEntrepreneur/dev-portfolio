@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { View, Button, Card, Link } from '../../components/~reusables/atoms/atoms';
 
-function ProjectSandboxView() {
+function ProjectSandboxView(props) {
   return (
     <View hCenter>
       <ProjectFrame>
         <iframe src="https://tipseaseapp.netlify.com/"></iframe>
       </ProjectFrame>
-      <Link to="code" fullWidth>
+      <Link to={`${props.match.url}/code`} fullWidth>
         <Button fullWidth>View Project Code</Button>
       </Link>
     </View>
