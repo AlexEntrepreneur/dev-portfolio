@@ -32,6 +32,7 @@ export const Button = styled.button`
   outline: none;
   margin-bottom: ${normal_space};
   border: 1px solid ${theme_secondary};
+  background-color: unset;
   color: ${theme_secondary};
   border-radius: 2px;
   text-decoration: none;
