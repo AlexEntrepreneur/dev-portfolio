@@ -87,9 +87,7 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-yarn.lock
 .DS_Store
 .vscode
 bundle
 coverage
-package-lock.json
