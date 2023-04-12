@@ -17,7 +17,7 @@ function ProjectsView() {
                 <Img src="https://picsum.photos/401/301?blur=10" />
               </Figure>
               <Figcaption hCenter>
-                Hello
+                <strong>Hello</strong>
               </Figcaption>
             </Link>
           </Container>
@@ -27,7 +27,7 @@ function ProjectsView() {
                 <Img src="https://picsum.photos/400/300?blur=10" />
               </Figure>
               <Figcaption hCenter>
-                Hello
+                <strong>Hello</strong>
               </Figcaption>
             </Link>
           </Container>
@@ -43,7 +43,7 @@ function ProjectsView() {
                 <Img src="https://picsum.photos/399/299?blur=10" />
               </Figure>
               <Figcaption hCenter>
-                Hello
+                <strong>Hello</strong>
               </Figcaption>
             </Link>
           </Container>
@@ -53,7 +53,7 @@ function ProjectsView() {
                 <Img src="https://picsum.photos/402/302?blur=10" />
               </Figure>
               <Figcaption hCenter>
-                Hello
+                <strong>Hello</strong>
               </Figcaption>
             </Link>
           </Container>
