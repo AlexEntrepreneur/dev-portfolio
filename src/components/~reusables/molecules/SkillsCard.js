@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Card } from '../atoms/atoms';
 import { small_space, normal_space, medium_space } from '../variables/spacing';
+import { theme_dark } from '../variables/colors';
 
 export const SkillsCard = styled(Card)`
   position: relative;
@@ -14,6 +15,6 @@ export const SkillsCard = styled(Card)`
     transform: translateY(-50%);
     padding: 0 ${normal_space};
     max-width: 90%;
-    background: white;
+    background: ${theme_dark};
   }
 `;
